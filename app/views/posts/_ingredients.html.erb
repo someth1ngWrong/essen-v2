@@ -2,16 +2,23 @@
 	<%= post_ingredient.ingredient.ingredient %>
 	<%= post_ingredient.amount %>
 	<%= post_ingredient.measure %>
-	<% ingredient_changes = [
+<%#	<% ingredient_changes = [
 		post_ingredient.ingr_replica1&.ingredient,
 		post_ingredient.ingr_replica2&.ingredient,
 		post_ingredient.ingr_replica3&.ingredient,
 		post_ingredient.ingr_replica4&.ingredient,
 		post_ingredient.ingr_replica5&.ingredient
 		].compact %>
-	<% unless ingredient_changes.empty? %>
-		(<%= ingredient_changes.join(' / ')%>)
-	<% end %>
+<%#	<% unless ingredient_changes.empty? %>
+<%#		(<%= ingredient_changes.join(' / ')%> <%#) %>
+<%#	<% end %>
+	<select name="ingredient_changes[ingredient_id]">
+  	<option value="<%= post_ingredient.ingr_replica1 %>"><%= post_ingredient.ingr_replica1&.ingredient %></option>
+  	<option value="<%= post_ingredient.ingr_replica2 %>"><%= post_ingredient.ingr_replica2&.ingredient %></option>
+  	<option value="<%= post_ingredient.ingr_replica3 %>"><%= post_ingredient.ingr_replica3&.ingredient %></option>
+  	<option value="<%= post_ingredient.ingr_replica4 %>"><%= post_ingredient.ingr_replica4&.ingredient %></option>
+  	<option value="<%= post_ingredient.ingr_replica5 %>"><%= post_ingredient.ingr_replica5&.ingredient %></option>
+	</select>
 	</br>
 <% end %>
 

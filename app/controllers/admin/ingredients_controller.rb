@@ -1,6 +1,5 @@
 class Admin::IngredientsController < Admin::AdminController
   before_action :set_ingredient, only: %i[ show edit update destroy ]
-  after_action :verify_authorized, only: %i[ new create edit update destroy ]
 
   # GET /ingredients or /ingredients.json
   def index
@@ -14,22 +13,19 @@ class Admin::IngredientsController < Admin::AdminController
   # GET /ingredients/new
   def new
     @ingredient = Ingredient.new
-    authorize @ingredient
   end
 
   # GET /ingredients/1/edit
   def edit
-    authorize @ingredient
   end
 
   # POST /ingredients or /ingredients.json
   def create
     @ingredient = Ingredient.new(ingredient_params)
-    authorize @ingredient
 
     respond_to do |format|
       if @ingredient.save
-        format.html { redirect_to @ingredient, notice: "Ingredient was successfully created." }
+        format.html { redirect_to [:admin, @ingredient], notice: "Ingredient was successfully created." }
         format.json { render :show, status: :created, location: @ingredient }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,11 +36,9 @@ class Admin::IngredientsController < Admin::AdminController
 
   # PATCH/PUT /ingredients/1 or /ingredients/1.json
   def update
-    authorize @ingredient
-
     respond_to do |format|
       if @ingredient.update(ingredient_params)
-        format.html { redirect_to @ingredient, notice: "Ingredient was successfully updated." }
+        format.html { redirect_to [:admin, @ingredient], notice: "Ingredient was successfully updated." }
         format.json { render :show, status: :ok, location: @ingredient }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,8 +49,6 @@ class Admin::IngredientsController < Admin::AdminController
 
   # DELETE /ingredients/1 or /ingredients/1.json
   def destroy
-    authorize @ingredient
-
     @ingredient.destroy
     respond_to do |format|
       format.html { redirect_to admin_ingredients_url, notice: "Ingredient was successfully destroyed." }

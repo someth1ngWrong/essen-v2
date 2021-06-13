@@ -6,29 +6,43 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js' %>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   </head>
 
   <body>
+    <%= react_component 'O_HeaderMobile' %>
+      
       <nav>
-      <%= link_to 'На главную', root_path %>
+        <%= link_to 'На главную', root_path %>
     
-      <div>
-        <ul>
-          <% if user_signed_in? %>
-            <li class="nav-item"><%= link_to 'Профиль', current_user, class: "nav-link" %></li>
-            <li class="nav-item"><%= link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "nav-link" %></li>
-            <% if current_user.admin? %>
-              <li class="nav-item"><%= link_to 'Административная панель', admin_posts_path, class: "nav-link" %></li>
+        <div>
+          <ul>
+            <% if user_signed_in? %>
+              <li class="nav-item"><%= link_to 'Профиль', current_user, class: "nav-link" %></li>
+              <li class="nav-item"><%= link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "nav-link" %></li>
+              <% if current_user.admin? %>
+                <li class="nav-item"><%= link_to 'Административная панель', admin_posts_path, class: "nav-link" %></li>
+              <% end %>
+            <% else %>
+              <li class="nav-item"><%= link_to 'Войти', new_user_session_path, class: "nav-link" %></li>
+              <li class="nav-item"><%= link_to 'Зарегистрироваться', new_user_registration_path, class: "nav-link" %></li>
             <% end %>
-          <% else %>
-            <li class="nav-item"><%= link_to 'Войти', new_user_session_path, class: "nav-link" %></li>
-            <li class="nav-item"><%= link_to 'Зарегистрироваться', new_user_registration_path, class: "nav-link" %></li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
+          </ul>
+        </div>
+      </nav>
+
+
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
   </body>

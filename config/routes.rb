@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'posts#index'
+  root 'landing#index'
+  # root 'posts#index'
+  get 'partners/index', to: 'partners#index'
 
   resources :posts #, only: [:show, :index]
   resources :ingredients, only: :index

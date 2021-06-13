@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Post', new_admin_post_path, class: 'btn_new-post' %>
+<%= link_to 'Ingredients', admin_ingredients_path %>
+<%= link_to 'All Users', admin_users_path %><br>
 <h1>Posts</h1>
 
 <table>
@@ -38,10 +41,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Post', new_admin_post_path %>
-<%= link_to 'Ingredients', admin_ingredients_path %>
-<%= link_to 'All Users', admin_users_path %>
-

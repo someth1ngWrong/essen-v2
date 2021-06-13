@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 class="test">Posts</h1>
 
-<table>
+<table class="posts__main">
   <thead>
     <tr>
       <th>Image</th>
@@ -11,8 +11,7 @@
       <th>Content</th>
       <th>Time</th>
       <th>Category</th>
-      <th>User</th>
-
+      <!--<th>User</th>-->
       <th>Ingredients</th>
 
     </tr>
@@ -27,7 +26,7 @@
         <td><%= post.content %></td>
         <td><%= post.time %></td>
         <td><%= post.category.name %></td>
-        <td><%= post.user_id %></td>
+        <!--<td><%= post.user.email %></td>-->
         <td><%= render 'ingredients', post: post %><br><%= link_to 'Смотреть рецепт', post %></td>
       </tr>
     <% end %>

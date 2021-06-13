@@ -10,4 +10,5 @@ class Post < ApplicationRecord
   belongs_to :user
 
   mount_uploader :image, ImageUploader
+  accepts_nested_attributes_for :post_ingredients, reject_if: :all_blank, allow_destroy: true
 end

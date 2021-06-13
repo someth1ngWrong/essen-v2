@@ -1,0 +1,8 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :ingredient %>
+    <%= f.collection_select :ingredient_id, Ingredient.order(:ingredient), :id, :ingredient, {:include_blank => true} %>
+  </div>
+
+  <%=  link_to_remove_association "remove ingredient", f %>
+</div>

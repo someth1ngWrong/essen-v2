@@ -1,7 +1,6 @@
 class Admin::PostIngredientsController < Admin::AdminController
   before_action :get_post
   before_action :set_post_ingredient, only: %i[ show edit update destroy ]
-  after_action :verify_authorized, except: %i[ index show ]
 
   # GET /post_ingredients or /post_ingredients.json
   def index
@@ -15,7 +14,6 @@ class Admin::PostIngredientsController < Admin::AdminController
   # GET /post_ingredients/new
   def new
     @post_ingredient = @post.post_ingredients.build
-    authorize @post_ingredient
   end
 
   # GET /post_ingredients/1/edit
@@ -25,11 +23,10 @@ class Admin::PostIngredientsController < Admin::AdminController
   # POST /post_ingredients or /post_ingredients.json
   def create
     @post_ingredient = @post.post_ingredients.build(post_ingredient_params)
-    authorize @post_ingredient
 
     respond_to do |format|
       if @post_ingredient.save
-        format.html { redirect_to post_post_ingredients_path(@post), notice: "Post ingredient was successfully created." }
+        format.html { redirect_to admin_post_post_ingredients_path(@post), notice: "Post ingredient was successfully created." }
         format.json { render :show, status: :created, location: @post_ingredient }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,11 +37,9 @@ class Admin::PostIngredientsController < Admin::AdminController
 
   # PATCH/PUT /post_ingredients/1 or /post_ingredients/1.json
   def update
-    authorize @post_ingredient
-
     respond_to do |format|
       if @post_ingredient.update(post_ingredient_params)
-        format.html { redirect_to post_post_ingredient_path(@post), notice: "Post ingredient was successfully updated." }
+        format.html { redirect_to admin_post_post_ingredient_path(@post), notice: "Post ingredient was successfully updated." }
         format.json { render :show, status: :ok, location: @post_ingredient }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,11 +50,10 @@ class Admin::PostIngredientsController < Admin::AdminController
 
   # DELETE /post_ingredients/1 or /post_ingredients/1.json
   def destroy
-    authorize @post_ingredient
 
     @post_ingredient.destroy
     respond_to do |format|
-      format.html { redirect_to post_post_ingredients_path(@post), notice: "Post ingredient was successfully destroyed." }
+      format.html { redirect_to admin_post_post_ingredients_path(@post), notice: "Post ingredient was successfully destroyed." }
       format.json { head :no_content }
     end
   end
