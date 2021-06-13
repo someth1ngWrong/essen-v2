@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ingredients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ingredient</th>
+      <th>Замена ингредиента</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ingredients.each do |ingredient| %>
+      <tr>
+        <td><%= ingredient.ingredient %></td>
+        <td><%= render "replacements", ingredient: ingredient %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', posts_path %>

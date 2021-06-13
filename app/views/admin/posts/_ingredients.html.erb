@@ -1,0 +1,20 @@
+<% post.post_ingredients.each do |post_ingredient| %>
+	<%= post_ingredient.ingredient.ingredient %>
+	<%= post_ingredient.amount %>
+	<%= post_ingredient.measure %>
+	<% ingredient_changes = [
+		post_ingredient.ingr_replica1&.ingredient,
+		post_ingredient.ingr_replica2&.ingredient,
+		post_ingredient.ingr_replica3&.ingredient,
+		post_ingredient.ingr_replica4&.ingredient,
+		post_ingredient.ingr_replica5&.ingredient
+		].compact %>
+	<% unless ingredient_changes.empty? %>
+		(<%= ingredient_changes.join(' / ')%>)
+	<% end %>
+	</br>
+<% end %>
+
+<%# <%= post.post_ingredients.joins(:ingredient).
+        pluck(:ingredient, :amount, :measure, :ingr_replica1_id, :ingr_replica2_id, :ingr_replica3_id, :ingr_replica4_id, :ingr_replica5_id).
+        map{ |pi| "#{pi[0]}, #{pi[1]} #{pi[2]}.(#{pi[3..7].join('/')})" }.join("\n") %>

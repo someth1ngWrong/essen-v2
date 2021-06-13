@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post: one
+  ingredient: one
+  amount: 1
+  measure: 1
+  ingr_replica1: one
+  ingr_replica2: one
+  ingr_replica3: one
+  ingr_replica4: one
+  ingr_replica5: one
+
+two:
+  post: two
+  ingredient: two
+  amount: 1
+  measure: 1
+  ingr_replica1: two
+  ingr_replica2: two
+  ingr_replica3: two
+  ingr_replica4: two
+  ingr_replica5: two

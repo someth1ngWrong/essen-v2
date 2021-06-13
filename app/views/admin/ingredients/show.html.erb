@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @ingredient.ingredient %> 
+</p>
+
+<p>
+  <strong>Замена для данного ингредиента</strong>
+  <%= render "replacements", ingredient: @ingredient %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_ingredient_path(@ingredient) %> |
+<%= link_to 'Back', admin_ingredients_path %>

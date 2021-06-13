@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @post.name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ingredient</th>
+      <th>Amount</th>
+      <th>Measure</th>
+      <th>Ingr replica1</th>
+      <th>Ingr replica2</th>
+      <th>Ingr replica3</th>
+      <th>Ingr replica4</th>
+      <th>Ingr replica5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post_ingredients.each do |post_ingredient| %>
+      <tr>
+        <td><%= post_ingredient.ingredient.ingredient %></td>
+        <td><%= post_ingredient.amount %></td>
+        <td><%= post_ingredient.measure %></td>
+        <td><%= post_ingredient.ingr_replica1&.ingredient %></td>
+        <td><%= post_ingredient.ingr_replica2&.ingredient %></td>
+        <td><%= post_ingredient.ingr_replica3&.ingredient %></td>
+        <td><%= post_ingredient.ingr_replica4&.ingredient %></td>
+        <td><%= post_ingredient.ingr_replica5&.ingredient %></td>
+        <td><%= link_to 'Show Post', [@post] %></td>
+        <td><%= link_to 'Edit Post Ingredient', edit_post_post_ingredient_path(@post, post_ingredient) %></td>
+        <td><%= link_to 'Destroy Post Ingredient', [@post, post_ingredient], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post Ingredient', new_post_post_ingredient_path(@post) %>

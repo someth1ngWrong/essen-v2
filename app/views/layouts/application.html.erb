@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EssenEatV3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <nav>
+      <%= link_to 'На главную', root_path %>
+    
+      <div>
+        <ul>
+          <% if user_signed_in? %>
+            <li class="nav-item"><%= link_to 'Профиль', current_user, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "nav-link" %></li>
+            <% if current_user.admin? %>
+              <li class="nav-item"><%= link_to 'Административная панель', admin_posts_path, class: "nav-link" %></li>
+            <% end %>
+          <% else %>
+            <li class="nav-item"><%= link_to 'Войти', new_user_session_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to 'Зарегистрироваться', new_user_registration_path, class: "nav-link" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
