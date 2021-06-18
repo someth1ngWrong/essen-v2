@@ -2,7 +2,7 @@ Post.destroy_all
 User.destroy_all
 Category.destroy_all
 PostIngredient.destroy_all
-Ingredient.destroy_all
+# Ingredient.destroy_all
 
 puts "Destroyed everything you touch"
 
@@ -15,7 +15,7 @@ categories.each do |category|
 end
 
 ingredients = %w[
-  Помидоры-черри Сыр\ «Фета» Салат\ Микс Масло\ оливковое Специи 5\ крупных\ редисок 3\ больших\ куска\ черного\ хлеба\ с\ семечками Сливочное\ масло Авокадо Шпинат 
+  Помидоры-черри Сыр\ «Фета» Салат\ Микс Масло\ оливковое Специи 5\ крупных\ редисок 3\ больших\ куска\ черного\ хлеба\ с\ семечками Сливочное\ масло Авокадо Шпинат
   Томатный\ соус Сыр\ «Маасдам» Тесто\ для\ пиццы Бекон Мука/подсолнечное\ масло Индейка
   Сельдерей Кабачки Орехи\ кешью Соус\ терияки
 ]
@@ -78,7 +78,7 @@ posts = [
   image: File.open(Rails.root.join('public', 'images', 'dsh-second-ragout.png')),
 	time: "35 мин",
 	category_id: Category.pluck(:id)[4],
-  user_id: user.id 
+  user_id: user.id
 	# ingredients: "
 	# Индейка — 200 г;
 	# Сельдерей — 1 шт;

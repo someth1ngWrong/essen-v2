@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'landing#index'
+  root 'posts#index'
   # root 'posts#index'
   get 'partners/index', to: 'partners#index'
 
