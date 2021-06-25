@@ -37,6 +37,27 @@
   </div>
 
   <div class="field">
+    <%= f.label :food_categories %>
+    <%= f.text_field :food_categories %>
+  </div>
+  <% FoodCategory.all.each do |food_category| %>
+      <%= f.check_box :food_category_ids, { multiple: true, include_hidden: false}, food_category.id %>
+        <label>
+          <%= food_category.name%>
+        </label>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :complexity %>
+    <%= f.select :complexity, Post.complexities.keys, selected: post.complexity || "easy" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number_of_servings %>
+    <%= f.number_field :number_of_servings %>
+  </div>
+
+  <div class="field">
     <%= f.label :category_id %>
     <%= f.collection_select :category_id, Category.order(:name), :id, :name, {:include_blank => true} %>
   </div>

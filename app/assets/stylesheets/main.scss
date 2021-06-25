@@ -1,0 +1,110 @@
+.main-container {
+  padding: 15px;
+  position: relative;
+
+  .frame-container {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    .collection-frame {
+      height: 220px;
+      min-width: 160px;
+      margin-right: 8px;
+      border-radius: 30px;
+      .frame-image-block {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        width: 160px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .collection-name {
+        font-weight: 500;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Inter';
+        color: #EFEFEF;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .main-title {
+    font-family: Inter;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 15px 0;
+  }
+
+  .m-sort-title {
+    font-family: Inter;
+    color: #9AA1A5;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .m-sort-title1 {
+    font-family: Inter;
+    color: #6C6BCF;
+    font-size: 16px;
+    padding-right: 15px;
+  }
+
+  .m-sort-title2 {
+    font-family: Inter;
+    color: #BDBCE9;
+    font-size: 16px;
+  }
+
+  .main-card-container {
+    border-radius: 15px;
+    background: #FFFFFF;
+    margin: 20px 0;
+
+    .m-icon-and-text {
+      display: flex;
+    }
+
+    .recipe-image {
+      width: 100%;
+    }
+
+    .favoriteIcon {
+      position: absolute;
+      left: 86%;
+      top: 29px;
+      width: 25px;
+      height: 30px;
+    }
+
+    .m-text-title {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 16px;
+      color: #9AA1A5;
+    }
+
+    .card-name {
+      font-family: Inter;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 36px;
+      padding: 15px 15px;
+    }
+  }
+}

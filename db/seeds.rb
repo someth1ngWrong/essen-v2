@@ -6,7 +6,7 @@ PostIngredient.destroy_all
 
 puts "Destroyed everything you touch"
 
-user = User.create!(email: 'vasya@email.com', password: '123456')
+user = User.create!(email: 'admin@gmail.com', password: '123456', role: 'admin')
 
 categories = %w[Закуски Завтраки Салаты Супы Основные\ блюда]
 
@@ -32,7 +32,9 @@ posts = [
   image: File.open(Rails.root.join('public', 'images', 'dsh-salad-vegetables.png')),
 	time: "15 мин",
 	category_id: Category.pluck(:id)[2],
-  user_id: user.id
+  user_id: user.id,
+	complexity: "easy",
+	number_of_servings: 4
 	# ingredients: "
 	# Помидоры-черри — 150 г;
 	# Сыр «Фета» — 60 г;
@@ -47,7 +49,9 @@ posts = [
   image: File.open(Rails.root.join('public', 'images', 'dsh-snack-bruschetta.png')),
 	time: "10 мин",
 	category_id: Category.pluck(:id)[0],
-  user_id: user.id
+  user_id: user.id,
+	complexity: "easy",
+	number_of_servings: 4
 	# ingredients: "5 крупных редисок;
 	# 3 больших куска черного хлеба с семечками;
 	# Сливочное маслом — 100 г;
@@ -61,7 +65,9 @@ posts = [
   image: File.open(Rails.root.join('public', 'images', 'dsh-pizza.png')),
 	time: "30 мин",
 	category_id: Category.pluck(:id)[4],
-  user_id: user.id
+  user_id: user.id,
+	complexity: "easy",
+	number_of_servings: 4
 	# ingredients: "
 	# Томатный соус — 100 г;
 	# Сыр «Маасдам» — 150 г;
@@ -78,7 +84,9 @@ posts = [
   image: File.open(Rails.root.join('public', 'images', 'dsh-second-ragout.png')),
 	time: "35 мин",
 	category_id: Category.pluck(:id)[4],
-  user_id: user.id
+  user_id: user.id,
+	complexity: "easy",
+	number_of_servings: 4
 	# ingredients: "
 	# Индейка — 200 г;
 	# Сельдерей — 1 шт;
@@ -93,6 +101,24 @@ posts.each do |post|
 	puts "Some magic just create a #{ postik.name } with id #{ postik.id }!"
 end
 
+food_categories = [
+	{
+		name: "omnivores",
+	},
+	{
+		name: 'vegetarians',
+	},
+	{
+		name: 'pescetarians',
+	},
+	{
+		name: 'vegans'
+	}
+]
+
+food_categories.each do |food_category|
+	FoodCategory.create!(food_category)
+end
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 # Post.create!(name: 'Индейка в соусе терияки', title: "Сытное горячее блюдо для холодных осенних дней", content: "Нарезать филе индейки небольшими кусочками. Хорошо разогреть сковородку с оливковым маслом. Кусочки индейки выложить в сковороду, перемешать, чтобы немного \«схватились\» корочкой. Затем огонь чуть уменьшить. Далее добавить в сковороду с индейкой нарезанные полукольцами лук и болгарский перец, выдавить чеснок и влить соус терияки (можно заменить на соевый, но вкус будет отличаться). Готовить минут 20. После добавить в сковороду мед, и когда он «расплавится», всыпать кунжутные семечки, перемешать.", user_id: 10, category_id: 40, post_ingredients_attributes: [{ amount: 200, measure: 'г' }, { amount: 1, measure: 'шт' }], ingredients_attributes: [{ingredient: 'Индейка' }, {ingredient: 'Сельдерей'}] )

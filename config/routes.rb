@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'posts#index'
+  root 'landing#index'
   # root 'posts#index'
   get 'partners/index', to: 'partners#index'
 
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :ingredients
     resources :users
+    resources :collections
     resources :posts do
       resources :post_ingredients
     end
@@ -21,5 +22,11 @@ Rails.application.routes.draw do
   resources :posts do
     resources :post_ingredients
   end
+
+  get 'homepage', to: 'main#index'
+  get 'recipes/:id', to: 'recipes#show'
+  get 'collections', to: 'collections#index'
+  get 'collections/:id', to: 'collections#show'
+  get 'author', to: 'author#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

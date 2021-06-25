@@ -1,7 +1,7 @@
 import React from 'react'
 
 const A_TextTitle = ({ title }) => (
-  <div className="recipe-title">
+  <div className="recipe-title main-title">
     <h1>{title}</h1>
   </div>
 )

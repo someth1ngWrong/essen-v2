@@ -22,7 +22,7 @@ class O_HeaderMobile extends React.Component {
           </div>
         </div>
         <M_CategoryFood />
-        <M_Filter />
+        <M_Filter activeFilter={this.props.activeFilter}/>
       </div>
     );
   }

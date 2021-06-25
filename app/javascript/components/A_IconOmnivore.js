@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import IconOmnivore from 'images/IconOmnivore.svg'
+import IconOmnivore from 'images/recipe_icons/frame.svg'
 
 
 class A_IconOmnivore extends React.Component {

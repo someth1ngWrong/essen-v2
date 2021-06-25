@@ -2,7 +2,7 @@ import React from 'react'
 
 const A_TextBody = ({ text}) => {
   return (
-      <div >{text}</div>
+      <div>{text}</div>
   )
 }
 

@@ -1,0 +1,8 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :post %>
+    <%= f.collection_select :id, Post.all, :id, :name, {:include_blank => true} %>
+  </div>
+
+  <%#=  link_to_remove_association "remove post", f %>
+</div>

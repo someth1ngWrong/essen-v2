@@ -1,6 +1,6 @@
 class Admin::PostsController < Admin::AdminController
   before_action :set_post, except: [:index, :new, :create]
-  
+
   # GET /posts or /posts.json
   def index
     @posts = Post.all
@@ -67,8 +67,9 @@ class Admin::PostsController < Admin::AdminController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :content, :image, :time, :category_id, :user_id, 
-        ingredient_ids: [], 
+      params.require(:post).permit(:name, :title, :content, :image, :time, :complexity, :number_of_servings, :category_id, :user_id,
+        ingredient_ids: [],
+        food_category_ids: [],
         post_ingredients_attributes: [:id, :post_id, :ingredient_id, :amount, :measure, :ingr_replica1_id, :ingr_replica2_id, :ingr_replica3_id, :ingr_replica4_id, :ingr_replica5_id, :_destroy])
     end
 end

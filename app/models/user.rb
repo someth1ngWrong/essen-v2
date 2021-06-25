@@ -11,4 +11,5 @@ class User < ApplicationRecord
   enum role: [:standard, :author, :admin]
 
   has_many :posts
+  has_many :collections
 end

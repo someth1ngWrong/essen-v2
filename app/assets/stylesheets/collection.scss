@@ -1,0 +1,114 @@
+.collection-container {
+  padding: 15px;
+  .recipe-title {
+    font-family: Inter;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 36px;
+    padding: 15px 0;
+    margin-right: 10px;
+  }
+  .collection-frame {
+    height: 220px;
+    width: 155px;
+    margin-right: 8px;
+    border-radius: 30px;
+    margin-bottom: 8px;
+    .frame-image-block {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: center;
+      width: 160px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .collection-name {
+      font-weight: 500;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Inter';
+      color: #EFEFEF;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      flex-wrap: wrap;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+    }
+  }
+  .breadcrumbs-block {
+    color: #6C6BCF;
+    font-family: 'Inter';
+    font-weight: 500;
+    padding: 10px 0 25px;
+  }
+
+  .collection-title {
+    font-family: Inter;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .collection-description, .collection-description-block {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+  }
+
+  .collection-description {
+    padding: 15px 0 30px;
+  }
+  .collection-description-block {
+    padding-bottom: 40px;
+  }
+
+  .main-card-container {
+    border-radius: 15px;
+    background: #FFFFFF;
+    margin: 20px 0;
+
+    .m-icon-and-text {
+      display: flex;
+    }
+
+    .recipe-image {
+      width: 100%;
+    }
+
+    .favoriteIcon {
+      position: absolute;
+      left: 86%;
+      top: 29px;
+      width: 25px;
+      height: 30px;
+    }
+
+    .m-text-title {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 16px;
+      color: #9AA1A5;
+    }
+
+    .card-name {
+      font-family: Inter;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 36px;
+      padding: 15px 15px;
+    }
+  }
+}
