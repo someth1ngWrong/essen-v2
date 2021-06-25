@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ошибка 404</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style media="screen">
-    @import "reset.css";
-    @import "application.css";
-
 
     body {
       background: #EFEFEF;
+      overflow-x: hidden;
     }
 
     /*HEADER---------------------------------------------------------------------*/
@@ -430,13 +431,38 @@
 
 
     }
+    @media (min-width: 1024px) {
+      header {
+        width: 60vw;
+        padding-left: 20%;
+      }
+
+      .header-categories > * {
+        font-size: 16px;
+      }
+
+      .header-categories {
+        padding-top: 12px;
+      }
+
+      .main-part > div {
+          left: 752px;
+      }
+
+      .error-title {
+        margin-bottom: 2px;
+      }
+    }
+
 
     </style>
   </head>
   <body>
     <header>
       <div class="header-mobile-line">
-        <a href="#"><img src="essen-logo-header.svg" alt="search icon" id="mobile-logo"></a>
+        <a href="https://essen-eat.herokuapp.com/">
+          <img src="logo.svg" alt="Essen logo" id="header-essen-logo">
+        </a>
         <div class="profile-mobile">
           <img src="A-icon-search.svg" alt="search icon" id="search-icon">
           <img src="saved.svg" alt="search icon">
@@ -445,19 +471,13 @@
       </div>
       <div class="header-first-line">
         <div class="header-categories">
-          <img src="essen-logo-header.svg" alt="Essen logo" id="header-essen-logo">
-          <img src="A-icon-search.svg" alt="search icon" id="search-icon">
-          <a href="#">Закуски</a>
-          <a href="#">Завтраки</a>
-          <a href="#">Салаты</a>
-          <a href="#">Супы</a>
-          <a href="#">Основные&nbsp;блюда</a>
-          <a href="#">Напитки</a>
-          <a href="#">Десерты</a>
-        </div>
-        <div class="header-profile">
-          <a href="#" class="profile-desktop">Войти</a>
-          <a href="#" class="profile-desktop">Зарегистрироваться</a>
+          <a href="https://essen-eat.herokuapp.com/">Закуски</a>
+          <a href="https://essen-eat.herokuapp.com/">Завтраки</a>
+          <a href="https://essen-eat.herokuapp.com/">Салаты</a>
+          <a href="https://essen-eat.herokuapp.com/">Супы</a>
+          <a href="https://essen-eat.herokuapp.com/">Основные&nbsp;блюда</a>
+          <a href="https://essen-eat.herokuapp.com/">Напитки</a>
+          <a href="https://essen-eat.herokuapp.com/">Десерты</a>
         </div>
       </div>
     </header>
@@ -467,7 +487,7 @@
         <img src="404.svg" alt="" class="error-title">
         <img src="404-ill.svg" alt="" class="error-illustration">
         <p class="error-text">По этому адресу ничего нет. <br>Может, он неправильный?</p>
-        <a href="#" class="return-link">На главную</a>
+        <a href="https://essen-eat.herokuapp.com/" class="return-link">На главную</a>
       </div>
     </div>
 
