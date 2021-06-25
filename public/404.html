@@ -1,67 +1,498 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ошибка 404</title>
+    <style media="screen">
+    @import "reset.css";
+    @import "application.css";
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    body {
+      background: #EFEFEF;
+    }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+    /*HEADER---------------------------------------------------------------------*/
+    header {
+      padding: 20px 40px 0px 40px;
+    }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
+    header * {
+      color: #272727;
+    }
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+    .header-categories > * {
+      text-decoration: none;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-right: 20px;
+    }
+
+    .header-categories, .header-profile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-profile > * {
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: right;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .header-profile > a:first-child, .header-categories > a:last-child  {
+      margin: 0;
+    }
+
+    .header-first-line {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #header-essen-logo {
+      margin-right: 20px;
+    }
+
+    #mobile-logo {
+      display: none;
+    }
+
+    .profile-mobile {
+      display: none;
+    }
+
+    .profile-desktop {
+      display: block;
+    }
+
+    .header-second-line {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: -0.005em;
+      text-align: left;
+
+    }
+
+    .filters {
+      background: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+      border-radius: 16px;
+      width: auto;
+    }
+
+    .filters > * {
+      background: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+      border-radius: 16px;
+      padding: 0px 12px 0 12px;
+      height: 28px;
+    }
+
+    .filters > * > img {
+      margin-right: 10px;
+    }
+
+    .filters > *:first-child {
+      background: #E9E9E9;
+    }
+
+    .header-second-line > p {
+      opacity: 0.4;
+      transform: translateX(-8px);
+    }
+
+
+
+    /*MAIN PART---------------------------------------------------------------------*/
+    .main-part {
+        height: calc(100vh - 49px);
+    }
+
+    .error-illustration {
+      height: 380px;
+      position: absolute;
+      top: -60px;
+      left: -450px;
+    }
+
+    .error-title {
+      height: 36px;
+      margin-bottom: 48px;
+    }
+
+    .error-text {
+      margin-bottom: 24px;
+    }
+
+    .main-part > div {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      position: relative;
+      top: 210px;
+      left: 522px;
+    }
+
+    .main-part > div > a {
+      text-decoration: none;
+      color: #6C6BCF;
+    }
+
+
+    /*FOOTER---------------------------------------------------------------------*/
+    .footer-container {
+      background: #272727;
+      color: #EFEFEF;
+      font-family: Inter, sans-serif;
+      padding: 40px;
+      display: grid;
+      row-gap: 32px;
+      grid-template-columns: 1fr;
+      grid-template-rows:  calc((100vw - 80px) * 0.2563)  50px 30px 20px;
+    }
+
+    .footer-logo {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .footer-logo > img {
+      height: calc((100vw - 80px) * 0.2563);
+      width: calc(100vw - 80px);
+    }
+
+    .footer-note {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      max-width: 350px;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-links {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+
+    .footer-inner-links {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .footer-inner-links > * {
+      margin-right: 44px;
+    }
+
+    .footer-outer-links {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .footer-outer-links > * {
+      margin-left: 44px;
+    }
+
+    #privacy, #insta {
+      margin: 0;
+    }
+
+    .footer-copyright {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+      color: #9AA1A5;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0em;
+    }
+
+    @media (max-width: 1024px) {
+      .header-categories  {
+        padding-right: 20px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .footer-container {
+        grid-template-rows:  calc((100vw - 80px) * 0.2563)  50px 140px 20px;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+        line-height: 36px;
+      }
+
+       .footer-inner-links, .footer-outer-links {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .footer-inner-links {
+        margin-right: 48px;
+      }
+
+
+      .footer-outer-links > * {
+        margin-left: 0;
+      }
+    }
+
+
+
+
+
+    @media (max-width: 500px) {
+      /*HEADER---------------------------------------------------------------------*/
+      header {
+        padding: 0;
+      }
+
+    .profile-mobile {
+      display: block;
+    }
+
+    .profile-desktop {
+      display: none;
+    }
+
+    .header-second-line {
+      margin-top: 16px;
+    }
+
+    .header-categories > img {
+      display: none;
+    }
+
+    .header-categories {
+      overflow-x: auto;
+      padding-left: 15px;
+      margin-top: 20px;
+    }
+
+    .header-mobile-line {
+      padding: 20px 15px 0px 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .profile-mobile > * {
+      margin-left: 20px;
+    }
+
+    .header-categories > * {
+      margin-right: 24px;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+
+    }
+
+    .filters > * > p {
+      display: none;
+    }
+
+    .filters > * > img {
+      margin-right: 0px;
+    }
+
+    #mobile-logo {
+      display: block;
+    }
+
+    /*MAIN PART---------------------------------------------------------------------*/
+    .main-part {
+        /* height: calc(100vh - 92px); */
+    }
+
+    .error-illustration {
+      position: static;
+      height: 232px;
+      margin-bottom: 24px;
+    }
+
+    .error-title {
+      height: 34px;
+      margin-bottom: 24px;
+    }
+
+    .error-text {
+      margin-bottom: 16px;
+    }
+
+    .main-part > div {
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: -0.015em;
+      text-align: center;
+      position: relative;
+      top: 90px;
+      left: 0;
+      width: 100vw;
+    }
+
+    .main-part > div > a {
+      text-decoration: none;
+      color: #6C6BCF;
+    }
+
+
+
+
+    /*FOOTER---------------------------------------------------------------------*/
+      .footer-container {
+        padding: 18px;
+        grid-template-rows:  calc((100vw - 36px) * 0.2563)  30px 140px 20px;
+      }
+
+      .footer-logo > img {
+        height: calc((100vw - 36px) * 0.2563);
+        width: calc(100vw - 36px);
+      }
+
+      .footer-note {
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .footer-inner-links {
+        margin-right: 7vw;
+      }
+
+
+
+    }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-mobile-line">
+        <a href="#"><img src="essen-logo-header.svg" alt="search icon" id="mobile-logo"></a>
+        <div class="profile-mobile">
+          <img src="A-icon-search.svg" alt="search icon" id="search-icon">
+          <img src="saved.svg" alt="search icon">
+          <img src="settings.svg" alt="search icon">
+        </div>
+      </div>
+      <div class="header-first-line">
+        <div class="header-categories">
+          <img src="essen-logo-header.svg" alt="Essen logo" id="header-essen-logo">
+          <img src="A-icon-search.svg" alt="search icon" id="search-icon">
+          <a href="#">Закуски</a>
+          <a href="#">Завтраки</a>
+          <a href="#">Салаты</a>
+          <a href="#">Супы</a>
+          <a href="#">Основные&nbsp;блюда</a>
+          <a href="#">Напитки</a>
+          <a href="#">Десерты</a>
+        </div>
+        <div class="header-profile">
+          <a href="#" class="profile-desktop">Войти</a>
+          <a href="#" class="profile-desktop">Зарегистрироваться</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-part">
+      <div class="">
+        <img src="404.svg" alt="" class="error-title">
+        <img src="404-ill.svg" alt="" class="error-illustration">
+        <p class="error-text">По этому адресу ничего нет. <br>Может, он неправильный?</p>
+        <a href="#" class="return-link">На главную</a>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="essen-logo.svg"></img>
+      </div>
+      <div class="footer-note">
+        Сборник кулинарных рецептов с&nbsp;гибкой заменой ингредиентов
+      </div>
+      <div class="footer-links">
+          <div class="footer-inner-links">
+            <div class="footer-option">О сервисе</div>
+            <div class="footer-option">Партнерам</div>
+            <div class="footer-option">Контакты</div>
+            <div class="footer-option" id="privacy">Приватность</div>
+          </div>
+          <div class="footer-outer-links">
+            <div class="footer-option" id="insta">Instagram</div>
+            <div class="footer-option">Facebook</div>
+            <div class="footer-option">TikTok</div>
+          </div>
+        </div>
+        <div class="footer-copyright">2021 © Essen</div>
+      </div>
+
+  </body>
 </html>

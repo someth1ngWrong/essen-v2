@@ -1,5 +1,12 @@
 .recipe-container {
   padding: 15px;
+
+  .recipe-information {
+    .recipe-information-div {
+      display: flex;
+    }
+  }
+
   .recipe-title {
     font-family: Inter;
     text-transform: uppercase;
@@ -24,6 +31,16 @@
     line-height: 36px;
   }
 
+  .recipe-title-three {
+    font-family: Inter;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 45px;
+  }
+
   .m-text-icon-recipe {
     display: flex;
     .m-text-title-recipe {
@@ -41,7 +58,6 @@
 
   .description-body-recipe {
     font-family: Inter;
-    text-transform: uppercase;
     font-style: normal;
     font-size: 18px;
     line-height: 32px;
@@ -141,11 +157,10 @@
 
   .recipe-description-block {
     font-family: Inter;
-    text-transform: uppercase;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
-    line-height: 36px;
+    line-height: 32px;
   }
 
   .recipe-image-block {
@@ -196,5 +211,105 @@
     line-height: 36px;
     color: rgba(108, 107, 207, 0.5);
     ;
+  }
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .recipe-container {
+    width: 100%;
+    margin-left: 30%;
+
+
+   .description-body-recipe {
+     margin-left: 25vw;
+     padding-top: 16px;
+     font-size: 14px;
+     line-height: 22px;
+     font-weight: 400;
+    }
+
+
+    .recipe-information {
+      margin-left: 25vw;
+
+      .recipe-information-div {
+        display: flex;
+      }
+
+      .main-title {
+        letter-spacing: -0.05em;
+        font-size: 48px;
+        line-height: 48px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .author-block {
+      margin-left: 25vw;
+
+      .a-link-1,
+      .a-link-2 {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    .ingredients-block {
+      position: absolute;
+      width: 23%;
+
+      .ingredients-title-block {
+        .signs-block {
+          .number-rec {
+            font-size: 20px;
+            padding-top: 1%;
+          }
+        }
+      }
+    }
+
+    .recipe-title {
+      font-size: 24px;
+    }
+
+
+    .recipe-title-three {
+      letter-spacing: -0.05em;
+    }
+
+    .text-caption-block {
+      margin-left: 25vw;
+
+      .recipe-title-two > a {
+        letter-spacing: -0.05em;
+      }
+    }
+
+    .recipe-description-block {
+      margin-left: 25vw;
+      font-size: 18px;
+      text-transform: none;
+      line-height: 30px;
+      font-weight: 400;
+    }
+
+    .like-button-block {
+      padding: 105px;
+      border-radius: 300px;
+    }
+
+    .icon-recipe-container-block {
+      width: 50%;
+      transform: translateX(50%);
+
+      .icon-recipe {
+        align-items: center;
+      }
+    }
+
+
   }
 }

@@ -45,6 +45,7 @@
     font-size: 36px;
     line-height: 36px;
     padding: 15px 0;
+    letter-spacing: -0.05em;
   }
 
   .m-sort-title {
@@ -107,4 +108,15 @@
       padding: 15px 15px;
     }
   }
+}
+
+@media (min-width: 1024px) {
+  body > div {
+    width: 60%;
+  }
+
+  .main-container {
+    padding-left: 30%;
+}
+
 }
