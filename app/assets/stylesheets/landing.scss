@@ -654,25 +654,25 @@ body {
 }
 
 @media (min-width: 1024px) {
-  // scrollbar
-    ::-webkit-scrollbar {
-    width: 15px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--main-black);
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--main-yellow);
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--main-green);
-  }
+  // // scrollbar
+  //   ::-webkit-scrollbar {
+  //   width: 15px;
+  // }
+  //
+  // /* Track */
+  // ::-webkit-scrollbar-track {
+  //   background: var(--main-black);
+  // }
+  //
+  // /* Handle */
+  // ::-webkit-scrollbar-thumb {
+  //   background: var(--main-yellow);
+  // }
+  //
+  // /* Handle on hover */
+  // ::-webkit-scrollbar-thumb:hover {
+  //   background: var(--main-green);
+  // }
 
   .section__one {
 
