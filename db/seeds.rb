@@ -33,7 +33,7 @@ posts = [
 	time: "15 мин",
 	category_id: Category.pluck(:id)[2],
   user_id: user.id,
-	complexity: "easy",
+	complexity: "Легко готовить",
 	number_of_servings: 4
 	# ingredients: "
 	# Помидоры-черри — 150 г;
@@ -50,7 +50,7 @@ posts = [
 	time: "10 мин",
 	category_id: Category.pluck(:id)[0],
   user_id: user.id,
-	complexity: "easy",
+	complexity: "Легко готовить",
 	number_of_servings: 4
 	# ingredients: "5 крупных редисок;
 	# 3 больших куска черного хлеба с семечками;
@@ -66,7 +66,7 @@ posts = [
 	time: "30 мин",
 	category_id: Category.pluck(:id)[4],
   user_id: user.id,
-	complexity: "easy",
+	complexity: "Легко готовить",
 	number_of_servings: 4
 	# ingredients: "
 	# Томатный соус — 100 г;
@@ -85,7 +85,7 @@ posts = [
 	time: "35 мин",
 	category_id: Category.pluck(:id)[4],
   user_id: user.id,
-	complexity: "easy",
+	complexity: "Легко приготовить",
 	number_of_servings: 4,
 	# ingredients: "
 	# Индейка — 200 г;

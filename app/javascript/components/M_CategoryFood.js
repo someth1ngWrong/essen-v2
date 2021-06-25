@@ -29,7 +29,15 @@ class M_CategoryFood extends React.Component {
           <div className="nav-option">
             <A_TextCaption name="Основные блюда"/>
           </div>
-          
+
+          <div className="nav-option">
+            <A_TextCaption name="Напитки"/>
+          </div>
+
+          <div className="nav-option">
+            <A_TextCaption name="Десерты"/>
+          </div>
+
         </div>
       </div>
     );

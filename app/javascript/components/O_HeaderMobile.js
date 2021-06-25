@@ -10,7 +10,7 @@ import M_Filter from './M_Filter'
 class O_HeaderMobile extends React.Component {
   render () {
     return (
-      <div>
+      <div className="navbar">
         <div className="navbar-container">
           <div className="navbar-block">
             <div className="logo-container">

@@ -9,12 +9,9 @@ import A_IconVegan from './A_IconVegan'
 const O_Like = () => {
   return (
     <div>
-      <div className="text-caption-block">
-        <div className="recipe-title-two">
-          <A_TextCaption name="Пoнраbился" />
-        </div>
-        <div className="recipe-title-two">
-          <A_TextCaption name=" рецепт?" />
+      <div className="text-caption-block-two">
+        <div className="recipe-title-three">
+          <A_TextCaption name="Понравился рецепт?" />
         </div>
       </div>
       <div className="like-button-block">

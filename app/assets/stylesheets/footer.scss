@@ -1,16 +1,22 @@
 .footer-container {
   background: #272727;
   margin-top: 60px;
+  width: 100vw;
+  padding-left: 0 !important;
+
+
   .footer-logo {
     display: flex;
     justify-content: space-around;
     background: #272727;
     padding: 20px;
+
     .footer-logo-image {
       background: #272727;
       width: 98%;
     }
   }
+
   .footer-note {
     width: 65%;
     background: transparent;
@@ -25,10 +31,12 @@
   .footer-option-container {
     display: flex;
     background: transparent;
+
     .footer-option-block {
       background: transparent;
       width: 40%;
       padding: 17px 25px 20px;
+
       .footer-option {
         font-family: Inter;
         font-style: normal;
@@ -52,3 +60,51 @@
     line-height: 16px;
   }
 }
+
+
+
+@media (min-width: 1024px) {
+
+  .footer-logo > img {
+    width: 96vw;
+  }
+
+  .footer-container {
+    .footer-note {
+      font-size: 16px;
+    }
+
+    .footer-option-container {
+      padding-top: 12px;
+
+      .footer-option-block {
+        width: 20%;
+        
+        .footer-option {
+          padding: 6px 0;
+        }
+        .footer-option:hover {
+          color: #AD99E5;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

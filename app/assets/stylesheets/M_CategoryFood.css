@@ -1,3 +1,9 @@
 .M_CategoryFood {
   color: blue;
 }
+
+@media (min-width: 1024px) {
+  .M_CategoryFood {
+    width: 200%;
+  }
+}

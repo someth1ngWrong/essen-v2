@@ -16,5 +16,5 @@ class Post < ApplicationRecord
 
   mount_uploader :image, ImageUploader
   accepts_nested_attributes_for :post_ingredients, reject_if: :all_blank, allow_destroy: true
-  enum complexity: { 'easy': 0, 'medium': 1, 'hard': 2 }
+  enum complexity: { 'Легко готовить': 0, 'Нужно постараться': 1, 'Сложно': 2 }
 end

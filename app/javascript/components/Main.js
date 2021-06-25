@@ -10,9 +10,9 @@ const Main = (props) => {
   return (
     <>
       <div class="main-container">
-        <A_TextTitle title="пOдбopКи" />
+        <A_TextTitle title="Подборки" />
         <Frame collections={props.collections}/>
-        <A_TextTitle title="Рецепtы" />
+        <A_TextTitle title="Рецепты" />
         <M_Sort/>
         <O_CardRecipe recipes={props.recipes}/>
       </div>

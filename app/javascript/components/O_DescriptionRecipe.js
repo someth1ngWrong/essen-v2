@@ -20,14 +20,18 @@ const O_DescriptionRecipe = ({ recipe, ingredients }) => {
   return (
     <>
       <div class="recipe-container">
-        <M_Breadcrumbs />
-        <div style={{display: "flex"}}>
+      <M_Breadcrumbs />
+      <div class="recipe-information">
+        <div class="recipe-information-div">
           <A_TextTitle title={recipe.name} />
           <div style={ {alignSelf: "center"}}>
             <A_IconBookmark/>
           </div>
         </div>
         <M_DescriptionRecipe recipe={recipe} />
+      </div>
+
+
         <A_Photo icon={recipe.image.url} />
         <div className= "description-body-recipe">
           <A_TextBody text={recipe.title}/>
@@ -44,10 +48,7 @@ const O_DescriptionRecipe = ({ recipe, ingredients }) => {
         </div>
         <div className="text-caption-block">
           <div className="recipe-title-two">
-            <A_TextCaption name="кaк" />
-          </div>
-          <div className="recipe-title-two">
-            <A_TextCaption name="пригoтоbить" />
+            <A_TextCaption name="кaк пригoтовить" />
           </div>
         </div>
         <div className="recipe-description-block">
