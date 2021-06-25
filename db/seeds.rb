@@ -86,7 +86,7 @@ posts = [
 	category_id: Category.pluck(:id)[4],
   user_id: user.id,
 	complexity: "easy",
-	number_of_servings: 4
+	number_of_servings: 4,
 	# ingredients: "
 	# Индейка — 200 г;
 	# Сельдерей — 1 шт;
