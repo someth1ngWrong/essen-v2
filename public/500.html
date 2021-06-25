@@ -2,14 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/404.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ошибка 500</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style media="screen">
+
     body {
       background: #EFEFEF;
+      overflow-x: hidden;
     }
 
     /*HEADER---------------------------------------------------------------------*/
@@ -429,58 +431,69 @@
 
 
     }
+    @media (min-width: 1024px) {
+      header {
+        width: 60vw;
+        padding-left: 20%;
+      }
+
+      .header-categories > * {
+        font-size: 16px;
+      }
+
+      .header-categories {
+        padding-top: 12px;
+      }
+
+      .main-part > div {
+          left: 632px;
+          top: 230px;
+      }
+
+      .error-title {
+        margin-bottom: 2px;
+      }
+
+      .error-illustration {
+        left: -380px;
+        top: -130px;
+      }
+    }
 
 
-      @media (min-width: 501px) {
-        .error-illustration {
-          transform: translateX(40px);
-        }
-        .error-text {
-          max-width: 350px;
-        }
-      }
-      @media (max-width: 500px) {
-        .error-illustration {
-          height: 250px;
-        }
-      }
     </style>
   </head>
   <body>
     <header>
       <div class="header-mobile-line">
-        <a href="#"><img src="Assets/essen-logo-header.svg" alt="search icon" id="mobile-logo"></a>
+        <a href="https://essen-eat.herokuapp.com/">
+          <img src="logo.svg" alt="Essen logo" id="header-essen-logo">
+        </a>
         <div class="profile-mobile">
-          <img src="Assets/A-icon-search.svg" alt="search icon" id="search-icon">
-          <a href="#" ><img src="Assets/saved.svg" alt="search icon"></a>
-          <a href="#"><img src="Assets/settings.svg" alt="search icon"></a>
+          <img src="A-icon-search.svg" alt="search icon" id="search-icon">
+          <img src="saved.svg" alt="search icon">
+          <img src="settings.svg" alt="search icon">
         </div>
       </div>
       <div class="header-first-line">
         <div class="header-categories">
-          <img src="Assets/essen-logo-header.svg" alt="Essen logo" id="header-essen-logo">
-          <img src="Assets/A-icon-search.svg" alt="search icon" id="search-icon">
-          <a href="#">Закуски</a>
-          <a href="#">Завтраки</a>
-          <a href="#">Салаты</a>
-          <a href="#">Супы</a>
-          <a href="#">Основные&nbsp;блюда</a>
-          <a href="#">Напитки</a>
-          <a href="#">Десерты</a>
-        </div>
-        <div class="header-profile">
-          <a href="#" class="profile-desktop">Войти</a>
-          <a href="#" class="profile-desktop">Зарегистрироваться</a>
+          <a href="https://essen-eat.herokuapp.com/">Закуски</a>
+          <a href="https://essen-eat.herokuapp.com/">Завтраки</a>
+          <a href="https://essen-eat.herokuapp.com/">Салаты</a>
+          <a href="https://essen-eat.herokuapp.com/">Супы</a>
+          <a href="https://essen-eat.herokuapp.com/">Основные&nbsp;блюда</a>
+          <a href="https://essen-eat.herokuapp.com/">Напитки</a>
+          <a href="https://essen-eat.herokuapp.com/">Десерты</a>
         </div>
       </div>
     </header>
 
     <div class="main-part">
       <div class="">
-        <img src="Assets/500.svg" alt="" class="error-title">
-        <img src="Assets/500-ill.svg" alt="" class="error-illustration">
+        <img src="500.svg" alt="" class="error-title">
+        <img src="500-ill.svg" alt="" class="error-illustration">
         <p class="error-text">Что-то пошло не так... Попробуйте перезагрузить страницу.</p>
-        <a href="#" class="return-link">На главную</a>
+        <a href="https://essen-eat.herokuapp.com/" class="return-link">На главную</a>
       </div>
     </div>
 
