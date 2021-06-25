@@ -19,7 +19,7 @@ module ApplicationHelper
         description: 'Essen — рецепты, подстраивающиеся под вас',
         type: 'website',
         url: request.original_url,
-        image: image_url('https://vk.com/doc131788831_600224063?hash=1d862fc1ce7b9543b3&dl=381182cede38d1c727')
+        image: image_url('https://psv4.userapi.com/c536236/u131788831/docs/d42/cde49a5ba784/og.png?extra=MzJ4KqLtsMICmLNSu-pzOQ8-fBfZtvUs-QlKIu-0udrxTGVdarhtj0nPONqPcFZuGMhDiqg3EFVFjgZWGcl0aQ9Et1NMYoC4yi7S8JxG5sUNjzWRlNh0mlF68WicgJT-aKL334JnfKKmYhr3')
       }
     }
   end
