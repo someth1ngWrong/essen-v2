@@ -85,7 +85,7 @@ posts = [
 	time: "35 мин",
 	category_id: Category.pluck(:id)[4],
   user_id: user.id,
-	complexity: "Легко приготовить",
+	complexity: "Легко готовить",
 	number_of_servings: 4,
 	# ingredients: "
 	# Индейка — 200 г;
