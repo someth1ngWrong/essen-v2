@@ -24,7 +24,7 @@ const O_CardRecipe = (props) => {
               <img class="favoriteIcon" src={A_IconBookmark}></img>
             </div>
               <A_TextBodyCards name={recipe.name}/>
-            <div style={{ display: "flex", padding: "16px" }}>
+            <div class="m-card-information" style={{ display: "flex", padding: "16px" }}>
               <div style={{ marginRight: "10px"}}>
                 <M_TextAndIcon
                   icon={A_IconTime}
