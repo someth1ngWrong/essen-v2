@@ -46,9 +46,18 @@
         padding: 10px 0;
         background: transparent;
         color: #EFEFEF;
+
+          a {
+            text-decoration: none;
+            color: #EFEFEF;
+          }
+
+          a:hover {
+              color: #AD99E5;
+            }
+        }
       }
     }
-  }
   .footer-content {
     background: transparent;
     color: #9AA1A5;
@@ -79,7 +88,7 @@
 
       .footer-option-block {
         width: 20%;
-        
+
         .footer-option {
           padding: 6px 0;
         }

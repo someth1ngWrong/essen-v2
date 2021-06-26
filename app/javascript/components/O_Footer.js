@@ -12,7 +12,7 @@ const O_Footer = () => {
       </div>
       <div class="footer-option-container">
         <div class="footer-option-block">
-          <div class="footer-option">О сервисе</div>
+          <div class="footer-option"> <a href="https://vitasiempre.github.io/essen_landing/">О сервисе</a></div>
           <div class="footer-option">Партнерам</div>
           <div class="footer-option">Контакты</div>
           <div class="footer-option">Приватность</div>
