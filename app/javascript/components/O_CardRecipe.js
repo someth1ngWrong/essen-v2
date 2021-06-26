@@ -16,27 +16,30 @@ const O_CardRecipe = (props) => {
       {
         recipes.map((recipe) => {
           return (
-            <div class="main-card-container" style={{position: "relative"}} onClick={() => goToRecipe(recipe.id)}>
-            <div>
-              <img class="recipe-image" src={recipe.image.url}></img>
-            </div>
-            <div >
-              <img class="favoriteIcon" src={A_IconBookmark}></img>
-            </div>
-              <A_TextBodyCards name={recipe.name}/>
-            <div class="m-card-information" style={{ display: "flex", padding: "16px" }}>
-              <div style={{ marginRight: "10px"}}>
-                <M_TextAndIcon
-                  icon={A_IconTime}
-                  text={recipe.time}
-                />
-              </div>
-              <M_TextAndIcon
-                icon={A_IconDifficulty}
-                text={recipe.complexity}
-              />
-            </div>
-          </div >
+
+              <div class="main-card-container" style={{position: "relative"}} onClick={() => goToRecipe(recipe.id)}>
+                <div>
+                  <img class="recipe-image" src={recipe.image.url}></img>
+                </div>
+
+                <div >
+                  <img class="favoriteIcon" src={A_IconBookmark}></img>
+                </div>
+
+                  <A_TextBodyCards name={recipe.name}/>
+                <div class="m-card-information" style={{ display:   "flex", padding: "16px" }}>
+                  <div style={{ marginRight: "10px"}}>
+                    <M_TextAndIcon
+                      icon={A_IconTime}
+                      text={recipe.time}
+                    />
+                  </div>
+                  <M_TextAndIcon
+                    icon={A_IconDifficulty}
+                    text={recipe.complexity}
+                  />
+                </div>
+              </div >
           )
         })
       }

@@ -14,7 +14,9 @@ const Main = (props) => {
         <Frame collections={props.collections}/>
         <A_TextTitle title="Рецепты" />
         <M_Sort/>
-        <O_CardRecipe recipes={props.recipes}/>
+        <div class="main-card-container-flex">
+          <O_CardRecipe recipes={props.recipes}/>
+        </div>
       </div>
       <Footer/>
     </>
