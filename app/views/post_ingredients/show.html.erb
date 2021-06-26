@@ -1,49 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Post:</strong>
+  <strong>Пост:</strong>
   <%= @post_ingredient.post.name %>
 </p>
 
 <p>
-  <strong>Ingredient:</strong>
+  <strong>Ингредиент:</strong>
   <%= @post_ingredient.ingredient_id %>
 </p>
 
 <p>
-  <strong>Amount:</strong>
+  <strong>Количество:</strong>
   <%= @post_ingredient.amount %>
 </p>
 
 <p>
-  <strong>Measure:</strong>
+  <strong>Мера:</strong>
   <%= @post_ingredient.measure %>
 </p>
 
 <p>
-  <strong>Ingr replica1:</strong>
+  <strong>Замена 1:</strong>
   <%= @post_ingredient.ingr_replica1_id %>
 </p>
 
 <p>
-  <strong>Ingr replica2:</strong>
+  <strong>Замена 2:</strong>
   <%= @post_ingredient.ingr_replica2_id %>
 </p>
 
 <p>
-  <strong>Ingr replica3:</strong>
+  <strong>Замена 3:</strong>
   <%= @post_ingredient.ingr_replica3_id %>
 </p>
 
 <p>
-  <strong>Ingr replica4:</strong>
+  <strong>Замена 4:</strong>
   <%= @post_ingredient.ingr_replica4_id %>
 </p>
 
 <p>
-  <strong>Ingr replica5:</strong>
+  <strong>Замена 5:</strong>
   <%= @post_ingredient.ingr_replica5_id %>
 </p>
 
-<%= link_to 'Edit', edit_post_post_ingredient_path(@post, @post_ingredient) %> |
-<%= link_to 'Back', post_post_ingredients_path(@post) %>
+<%= link_to 'Редактировать', edit_post_post_ingredient_path(@post, @post_ingredient) %> |
+<%= link_to 'Вернуться', post_post_ingredients_path(@post) %>

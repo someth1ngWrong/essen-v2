@@ -1,3 +1,39 @@
+.field {
+  padding: 10px 60px;
+
+  label {
+    font-family: 'Inter',sans-serif;
+    font-size: 58px;
+    letter-spacing: -0.05em;
+    color: #000;
+    display: flex;
+  }
+
+  input,
+  textarea,
+  select {
+    font-family: 'Inter',sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    height: 60px;
+    border-radius: 200px;
+    border: 0px double black;
+    padding: 30px;
+  }
+
+  textarea {
+    border-radius: 8px;
+  }
+
+  #user_remember_me {
+    height: 180px;
+    width: 160px;
+    border-radius: 310px;
+  }
+}
+
+
+
 // body {
 //   background-color: #fff;
 //   color: #333;
