@@ -49,19 +49,11 @@
 
           <td>
             <div class="table_btns">
-<<<<<<< HEAD
               <%= link_to 'Посмотреть', [:admin, post] %>
               <%= link_to 'Изменить', edit_admin_post_path(post) %>
               <%= link_to 'Добавить ингредиенты', new_admin_post_post_ingredient_path(post) %>
               <%= link_to 'Удалить', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
-=======
-            <%= link_to 'Посмотреть', [:admin, post] %> <br>
-            <%= link_to 'Редактировать', edit_admin_post_path(post) %><br>
-            <%= link_to 'Удалить', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' } %><br>
-            <%= link_to 'Добавить ингредиенты', new_admin_post_post_ingredient_path(post) %>
-          </div>
->>>>>>> 5e0b3ab17d555328ea5f0a996983d3f011ee0284
           </td>
         </tr>
       <% end %>
