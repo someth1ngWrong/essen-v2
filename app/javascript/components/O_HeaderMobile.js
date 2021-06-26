@@ -8,13 +8,14 @@ import M_Filter from './M_Filter'
 
 
 class O_HeaderMobile extends React.Component {
-  render () {
+  render ()  {
+    const goToHome = () => window.location.pathname = "/"
     return (
       <div className="navbar">
         <div className="navbar-container">
           <div className="navbar-block">
-            <div className="logo-container">
-              <A_Logo />
+            <div onClick={goToHome} className="logo-container">
+              <A_Logo/>
             </div>
             <div className="action-container">
               <M_HeaderIcons />
