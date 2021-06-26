@@ -10,40 +10,40 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Название:</strong>
   <%= @post.name %>
 </p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Описание:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Как приготовить:</strong>
   <%= @post.content %>
 </p>
 
 <p>
-  <strong>Ingredients:</strong>
+  <strong>Ингредиенты:</strong>
   <%= render 'ingredients', post: @post %>
 </p>
 
 <p>
-  <strong>Time:</strong>
+  <strong>Время приготовления:</strong>
   <%= @post.time %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>категория блюда:</strong>
   <%= @post.category.name %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Пользователь:</strong>
   <%= @post.user.email %>
 </p>
 
-<%= link_to 'Edit', edit_admin_post_path(@post) %> |
-<%= link_to 'Add Post Ingredient', admin_post_post_ingredients_path(@post) %> |
-<%= link_to 'Back', admin_posts_path %>
+<%= link_to 'Редактировать', edit_admin_post_path(@post) %> |
+<%= link_to 'Добавить ингредиенты и замены', admin_post_post_ingredients_path(@post) %> |
+<%= link_to 'Вернуться', admin_posts_path %>

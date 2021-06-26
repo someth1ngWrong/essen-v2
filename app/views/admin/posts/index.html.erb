@@ -49,9 +49,9 @@
 
           <td>
             <div class="table_btns">
-            <%= link_to 'Show', [:admin, post] %> <br>
-            <%= link_to 'Edit', edit_admin_post_path(post) %><br>
-            <%= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' } %><br>
+            <%= link_to 'Посмотреть', [:admin, post] %> <br>
+            <%= link_to 'Редактировать', edit_admin_post_path(post) %><br>
+            <%= link_to 'Удалить', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' } %><br>
             <%= link_to 'Добавить ингредиенты', new_admin_post_post_ingredient_path(post) %>
           </div>
           </td>

@@ -118,6 +118,7 @@
     align-items: flex-start;
     padding: 8px 0;
     justify-content: flex-start;
+
     .ingeredient-one, .ingeredient-two{
       font-family: Inter;
       text-transform: uppercase;
@@ -127,7 +128,8 @@
       line-height: 36px;
     }
     .ingeredient-one {
-      margin-right: 20px;
+      margin-right: 18px;
+      line-height: 24px;
       max-width: 200px;
       width: 100%;
     }
@@ -301,6 +303,10 @@
     .like-button-block {
       padding: 105px;
       border-radius: 300px;
+    }
+
+    .like-button-block:hover {
+      background: #6C6BCF;
     }
 
     .icon-recipe-container-block {
