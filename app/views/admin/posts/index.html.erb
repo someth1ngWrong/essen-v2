@@ -22,9 +22,9 @@
   <table class="admin_posts_table">
     <thead>
       <tr>
-        <th>Фото</th>
-        <th>Название</th>
-        <th>Категория</th>
+        <th style="padding-left: 100px">Фото</th>
+        <th style="padding-left: 160px">Название</th>
+        <th style="padding-left: 205px">Категория</th>
         <!-- <th colspan="4"></th> -->
         <!-- <th>Title</th> -->
         <!-- <th>Content</th> -->
@@ -38,22 +38,22 @@
     <tbody>
       <% @posts.each do |post| %>
         <tr>
-          <td><%= image_tag(post.image.url, alt: 'Image', class: 'table-img') if post.image? %></td>
-          <td><%= post.name %></td>
+          <td style="width: 200px"><%= image_tag(post.image.url, alt: 'Image', class: 'table-img') if post.image? %></td>
+          <td style="width: 290px"><%= post.name %></td>
           <!-- <td><%= post.title %></td> -->
           <!-- <td><%= post.content %></td> -->
           <!-- <td><%= post.time %></td> -->
-          <td><%= post.category.name %></td>
+          <td style="width: 10px"><%= post.category.name %></td>
 
 
 
           <td>
             <div class="table_btns">
-            <%= link_to 'Посмотреть', [:admin, post] %> <br>
-            <%= link_to 'Редактировать', edit_admin_post_path(post) %><br>
-            <%= link_to 'Удалить', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' } %><br>
-            <%= link_to 'Добавить ингредиенты', new_admin_post_post_ingredient_path(post) %>
-          </div>
+              <%= link_to 'Посмотреть', [:admin, post] %>
+              <%= link_to 'Изменить', edit_admin_post_path(post) %>
+              <%= link_to 'Добавить ингредиенты', new_admin_post_post_ingredient_path(post) %>
+              <%= link_to 'Удалить', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
           </td>
         </tr>
       <% end %>

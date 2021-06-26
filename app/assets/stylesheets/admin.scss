@@ -2,6 +2,7 @@
 
   margin-left: 0px;
   margin-top: 48px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +12,8 @@
     margin-left: 52px;
   }
   .admin_btn {
-    font-family: "Inter";
+
+    font-family: "Inter" ;
     font-weight: 600;
     text-decoration: none;
 
@@ -22,16 +24,16 @@
     border-radius: 300px;
 
     color: var(--main-black);
-    background: gainsboro;
+    background: rgba(0,0,0, 0.05) !important;
   }
 }
 
 .admin_navbar{
   h1 {
     font-family: "Inter";
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: -0.05em;
+    font-size: 58px;
+    font-weight: 400;
+    letter-spacing: -0.07em;
 
     margin-top: 72px;
     margin-left: 48px;
@@ -56,19 +58,19 @@
       padding: 8px 16px;
 
 
-      font-weight: 600;
-      letter-spacing: -0.04em;
+      font-weight: 400;
+      letter-spacing: -0.05em;
       color: var(--main-black);
     }
 
     p {
-      background: gainsboro;
+      background: rgba(0,0,0, 0.05) !important;
       border-radius: 300px;
     }
 
     .admin_links:hover {
       padding: 8px 16px;
-      background: gainsboro;
+      background: rgba(0,0,0, 0.05) !important;
       border-radius: 300px;
     }
   }
@@ -92,13 +94,13 @@
     tbody {
       display: block;
       font-family: "Inter";
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: -0.04em;
     }
 
     thead {
       padding: 12px;
-      background: gainsboro;
+      background: rgba(0,0,0, 0.05) !important;
 
       border-radius: 6px;
     }
@@ -108,6 +110,10 @@
      width: 1386px;
 
      border-spacing: 20px 3px;
+
+       tr {
+         margin-left: 20px;
+       }
     }
 
     td {
@@ -119,7 +125,25 @@
 
       .table_btns {
         width: 300px;
-        color: red;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+        a {
+          margin-top: 10px;
+          text-decoration: none;
+          color: black;
+          font-weight: 400;
+        }
+
+        a:last-child{
+          margin-top: 30px;
+          color: #ff6242;
+        }
+
+        a:hover {
+          opacity: 40%;
+        }
+
       }
     }
 
