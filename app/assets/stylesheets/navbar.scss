@@ -88,14 +88,12 @@
 
 @media (min-width: 1024px) {
   .navbar {
-      padding-left: 30%;
+      padding-left: -50%;
 
-      .navbar-block {
-        width: 140%;
-      }
+
 
       .tab-options-block {
-        width: calc(100vw - 100%);
+        // width: calc(100vw - 100%);
       }
     }
 

@@ -23,7 +23,10 @@ const O_Footer = () => {
           <div class="footer-option">TikTok</div>
         </div>
       </div>
-      <div class="footer-content">2021 © Essen</div>
+      <div class="footer-content">2021 © Essen
+
+      </div>
+      <div class="footer-bg"></div>
     </div>
   )
 }

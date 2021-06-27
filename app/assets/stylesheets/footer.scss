@@ -1,7 +1,7 @@
 .footer-container {
   background: #272727;
   margin-top: 60px;
-  width: 100vw;
+  // width: 100vw;
   padding-left: 0 !important;
 
 
@@ -78,7 +78,24 @@
     width: 96vw;
   }
 
+
+
   .footer-container {
+    position: relative;
+    padding-top: 30px;
+    overflow-y: clip;
+
+    .footer-bg {
+      background: #272727;
+      position: absolute;
+      height: 609.52px;
+      width: 1000vw;
+      height: 200vh;
+      margin-left: -10000px;
+      top: 0;
+      z-index: -1;
+    }
+
     .footer-note {
       font-size: 16px;
     }
