@@ -29,7 +29,7 @@ posts = [
 	name: "Овощной салат с фетой",
 	title: "Легкий и быстрый рецепт",
 	content:"Разрезать помидоры пополам, нарезать сыр «Фета» на небольшие кубики. Салат помыть и обсушить, добавить сливочное масло и специи. Перемешать все ингредиенты, приятного аппетита!" "&nbsp;".html_safe,
-  image: File.open(Rails.root.join('public', 'images', 'dsh-salad-vegetables.png')),
+  image: open("https://raw.githubusercontent.com/someth1ngWrong/essen_v2/master/app/assets/images/face-with-cold-sweat.png"),
 	time: "15 мин",
 	category_id: Category.pluck(:id)[2],
   user_id: user.id,
