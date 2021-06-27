@@ -75,7 +75,13 @@ collections = [
 	name: "Рецепты для веселых вечеров",
 	title: "Вам пригодятся не только настольные игры, умная колонка и онлайн-кинотеатр, но и закуски к ним! Делимся 10 рецептами для веселых вечеров с друзьями.",
 	image: URI.open("https://raw.githubusercontent.com/someth1ngWrong/essen_v2/master/app/assets/images/recipe_photos/recipe_1.png"),
-	}
+},
+	{
+	user_id: user.id,
+	name: "Ужин при свечах",
+	title: "Чтобы устроить достойный праздник важно учесть не только вкусное меню, но и все детали, мелочи. Атмосферой любви, романтики, страсти, должен быть пропитан воздух.",
+	image: URI.open("https://raw.githubusercontent.com/someth1ngWrong/essen_v2/master/app/assets/images/recipe_photos/recipe_1.png"),
+},
 ]
 
 collections.each do |collection|
