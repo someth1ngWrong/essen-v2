@@ -38,9 +38,9 @@ const O_DescriptionRecipe = ({ recipe, ingredients }) => {
         </div>
         <div className="author-block">
           <M_AuthorLinks
-            link_1="Рецепт предоставлен"
-            link_2="BLAU"
-            link_3="Все рецепты автора"
+            // link_1="Рецепт предоставлен"
+            // link_2="BLAU"
+            // link_3="Все рецепты автора"
           />
         </div>
         <div className="ingredients-block">

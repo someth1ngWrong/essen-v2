@@ -15,8 +15,10 @@
       }
     }
   }
+
 .recipe-container {
   padding: 15px;
+
 
   .recipe-information {
     .recipe-information-div {
@@ -138,7 +140,6 @@
 
     .ingeredient-one, .ingeredient-two{
       font-family: Inter;
-      text-transform: uppercase;
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
@@ -240,36 +241,74 @@
 
 @media (min-width: 1024px) {
 
+
   .main-card-container-flex {
     display: flex;
     width: 70vw;
 
     .main-card-container {
-      width: 300px;
-      margin:32px;
+      position: relative;
+      width: 340px;
+      height: 370px;
+      margin: 32px 16px 32px 0;
 
+      .favoriteIcon {
+        width: 24px;
+        height: 24px;
+        top: 20px;
+        right: 16px;
+      }
 
-      .m-card-information {
+      .m-icon-and-text {
+        width: auto;
         display: flex;
       }
 
+      .m-text-title {
+        font-size: 12px;
+        width: 100%;
+        padding-left: 4px;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+      }
+
+      .m-sort-title {
+        padding: 10px 0;
+      }
+
+      .m-card-information {
+        display: flex;
+        padding: 16px;
+        position: absolute;
+        bottom: 0;
+      }
+
       .card-name {
+        position: absolute;
+        bottom: 42px;
+
+
         font-size: 16px;
-        letter-spacing: -0.05em;
+        letter-spacing: -0.02em;
         text-transform: none;
         line-height: 22px;
       }
     }
   }
 
-  .main-card-container-flex:nth-child(2) {
-      margin: 0 10px;
-    }
-
 
   .recipe-container {
     width: 100%;
     margin-left: 30%;
+    position: relative;
+
+
+    .recipe-image {
+      width: 25vw;
+      position: absolute;
+      top: 30px;
+    }
 
 
    .description-body-recipe {
@@ -309,6 +348,7 @@
     .ingredients-block {
       position: absolute;
       width: 23%;
+      top: 25vw;
 
       .ingredients-title-block {
         .signs-block {

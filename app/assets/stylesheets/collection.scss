@@ -1,5 +1,6 @@
 .collection-container {
   padding: 15px;
+
   .recipe-title {
     font-family: Inter;
     text-transform: uppercase;
@@ -112,3 +113,173 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+
+  .collection-container {
+    padding-left: 30%;
+
+
+
+    .main-card-container-flex {
+      display: flex;
+      width: 70vw;
+
+      .main-card-container {
+        position: relative;
+        width: 340px;
+        height: 330px;
+        margin: 32px;
+
+        .favoriteIcon {
+          width: 16px;
+          height: 16px;
+          top: 16px;
+          right: 16px;
+        }
+
+        .m-icon-and-text {
+          width: auto;
+          display: flex;
+        }
+
+        .m-text-title {
+          font-size: 12px;
+          width: 100%;
+          width: -moz-available;          /* WebKit-based browsers will ignore this. */
+          width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+          width: fill-available;
+        }
+
+
+        .m-card-information {
+          display: flex;
+          padding: 16px;
+        }
+
+        .card-name {
+          position: absolute;
+          bottom: 36px;
+
+
+          font-size: 16px;
+          letter-spacing: -0.02em;
+          text-transform: none;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .main-card-container-flex:nth-child(odd) {
+        margin: 0 12px;
+      }
+
+
+    .recipe-container {
+      width: 100%;
+      margin-left: 30%;
+      position: relative;
+
+
+      .recipe-image {
+        width: 25vw;
+        position: absolute;
+        top: 30px;
+      }
+
+
+     .description-body-recipe {
+       margin-left: 25vw;
+       padding-top: 16px;
+       font-size: 14px;
+       line-height: 22px;
+       font-weight: 400;
+      }
+
+
+      .recipe-information {
+        margin-left: 25vw;
+
+        .recipe-information-div {
+          display: flex;
+        }
+
+        .main-title {
+          letter-spacing: -0.05em;
+          font-size: 48px;
+          line-height: 48px;
+          padding-bottom: 20px;
+        }
+      }
+
+      .author-block {
+        margin-left: 25vw;
+
+        .a-link-1,
+        .a-link-2 {
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+
+      .ingredients-block {
+        position: absolute;
+        width: 23%;
+        top: 25vw;
+
+        .ingredients-title-block {
+          .signs-block {
+            .number-rec {
+              font-size: 20px;
+              padding-top: 1%;
+            }
+          }
+        }
+      }
+
+      .recipe-title {
+        font-size: 24px;
+      }
+
+
+      .recipe-title-three {
+        letter-spacing: -0.05em;
+      }
+
+      .text-caption-block {
+        margin-left: 25vw;
+
+        .recipe-title-two > a {
+          letter-spacing: -0.05em;
+        }
+      }
+
+      .recipe-description-block {
+        margin-left: 25vw;
+        font-size: 18px;
+        text-transform: none;
+        line-height: 30px;
+        font-weight: 400;
+      }
+
+      .like-button-block {
+        padding: 105px;
+        border-radius: 300px;
+      }
+
+      .like-button-block:hover {
+        background: #6C6BCF;
+      }
+
+      .icon-recipe-container-block {
+        width: 50%;
+        transform: translateX(50%);
+
+        .icon-recipe {
+          align-items: center;
+        }
+      }
+
+      }
+    }
+  }
