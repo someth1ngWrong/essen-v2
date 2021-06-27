@@ -2,6 +2,7 @@ Post.destroy_all
 User.destroy_all
 Category.destroy_all
 PostIngredient.destroy_all
+# Collection.destroy_all
 # Ingredient.destroy_all
 
 puts "Destroyed everything you touch"
@@ -28,6 +29,19 @@ ingredients.each do |i|
   Ingredient.create!(ingredient: i)
 end
 
+collections = [
+	{
+	user_id: user.id,
+	name: "Рецепты для веселых вечеров",
+	title: "Вам пригодятся не только настольные игры, умная колонка и онлайн-кинотеатр, но и закуски к ним! Делимся 10 рецептами для веселых вечеров с друзьями.",
+	image: URI.open("https://raw.githubusercontent.com/someth1ngWrong/essen_v2/master/app/assets/images/recipe_photos/recipe_1.png"),
+	}
+]
+
+collections.each do |collection|
+	Collection.create!(collection)
+end
+
 posts = [
 {
 	name: "Курица в сидре с беконом",
@@ -38,8 +52,7 @@ posts = [
 	4. Две луковицы очистить, разрезать вдоль на&nbsp;две части&nbsp;— или четыре, если лук крупный. </br></br>
 	5. Чеснок очистить от&nbsp;кожуры. Дольки раздавить плоской стороной ножа и&nbsp;разделить на&nbsp;сегменты. </br></br>
 	6. В сковороду выложить кусочки курицы в&nbsp;беконе. Вокруг разложить дольки яблок, лук и&nbsp;чеснок. Добавить соль и&nbsp;перец. Сверху разложить веточки тимьяна. Сбрызнуть оливковым маслом. Отправить в&nbsp;духовку на&nbsp;25–30 минут. </br></br>
-	7. Если у&nbsp;вас есть режим верхнего гриля в&nbsp;духовке, включите его на&nbsp;пару минут в&nbsp;самом конце, чтобы курица подрумянилась.</br></br>
-	 8. Через 25–30 минут сковороду достать из&nbsp;духовки. Выложить курицу на&nbsp;тарелку.</br></br>
+	7. Если у&nbsp;вас есть режим верхнего гриля в&nbsp;духовке, включите его на&nbsp;пару минут в&nbsp;самом конце, чтобы курица подрумянилась.</br></br> 8. Через 25–30 минут сковороду достать из&nbsp;духовки. Выложить курицу на&nbsp;тарелку.
 	9. Сковороду поставить на&nbsp;плиту, добавить 200&nbsp;г сидра, включить сильный огонь и&nbsp;уваривать соус 4 минуты. Затем вернуть кусочки курицы в&nbsp;сковороду и&nbsp;прогреть всё вместе еще&nbsp;минуту." "&nbsp;" .html_safe,
   image: URI.open("https://raw.githubusercontent.com/someth1ngWrong/essen_v2/master/app/assets/images/recipe_photos/recipe_1.png"),
 	time: "45 мин",

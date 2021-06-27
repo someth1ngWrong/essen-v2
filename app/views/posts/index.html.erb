@@ -24,7 +24,7 @@
         <td><%= image_tag(post.image.url, alt: 'Image') if post.image? %></td>
         <td><%= post.name %></td>
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
+        <td><%= post.content.html %></td>
         <td><%= post.time %></td>
         <td><%= post.category.name %></td>
         <!--<td><%= post.user.email %></td>-->
