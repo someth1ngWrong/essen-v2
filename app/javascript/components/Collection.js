@@ -27,13 +27,10 @@ const Collection = ({ collection }) => {
         <div className="collection-title">
           <A_TextTitle title={collection.name} />
         </div>
-        <div className="collection-description">
-          <A_TextCaption name="Ресторан BLAU"/>
-        </div>
-        <div className="collection-description-block">
+        <div className="collection-description-block-1">
           <A_TextCaption name={collection.title}/>
         </div>
-        <div>
+        <div className="main-card-container-flex">
           <O_CardRecipe recipes={collection.posts}/>
         </div>
       </div>
