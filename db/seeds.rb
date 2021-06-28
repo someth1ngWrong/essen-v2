@@ -135,7 +135,7 @@ posts = [
 	Смешайте 15 г кориандра, 5 г чили, 15 г куркумы, 20 г амчура и 10 г соли. Добавьте в маринад.
 	Поместите 4 куриные грудки в зип-пакет вместе с маринадом и помассируйте их, чтобы маринад полностью пропитал филе. Можно проделать то же самое и в обычной миске, но тогда придется мять сырую курицу.
 	Выложите куриное филе на тарелку и посыпьте сверху целыми листиками мяты и кинзы.",
-  image: URI.open("https://raw.githubusercontent.com/someth1ngWrong/essen_v2/master/app/assets/images/recipe_photos/recipe_7.png"),
+  image: open("https://psv4.userapi.com/c505536/u131788831/docs/d50/e4811b8ff6c6/Montazhnaya_oblast_1_kopia_9.jpg?extra=XlGwpdzQt0JrZNGE2zIE9K8hr6G5AyHB6AZcUSH2VH2xJb_lBaqFuv6-1M0CA4jIGJ3gVHAN2AhIeiXypsth8EmxQ0So0CSfJDlJSBxaHt9IduWrQVkNEGrp6sIWSIiMlGwaDENbv6pBAJzzQWv5qdK3F-q9"),
 	time: "120 мин",
 	category_id: Category.pluck(:id)[4],
   user_id: user.id,
