@@ -137,6 +137,8 @@
     align-items: flex-start;
     padding: 8px 0;
     justify-content: flex-start;
+    margin-top: 6px;
+    width: max-content;
 
     .ingeredient-one, .ingeredient-two{
       font-family: Inter;
@@ -149,7 +151,6 @@
       margin-right: 18px;
       line-height: 24px;
       max-width: 200px;
-      width: 100%;
     }
 
     .ingeredients-list-arrow {
@@ -252,7 +253,7 @@
     .main-card-container {
       position: relative;
       width: 332px;
-      height: 370px;
+      height: 400px;
 
       .favoriteIcon {
         width: 24px;
@@ -303,6 +304,7 @@
   .recipe-container {
     width: 100%;
     position: relative;
+    padding: 30px 15px;
 
 
     .recipe-image {
@@ -348,7 +350,7 @@
 
     .ingredients-block {
       position: absolute;
-      width: 23%;
+      width: 33%;
       top: 25vw;
 
       .ingredients-title-block {
